@@ -24,3 +24,32 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.skill-strip {
+  overflow: hidden;
+  background: var(--background);
+  padding: 1rem;
+  color: var(--foreground);
+  font-weight: 600;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+.skill-scroll {
+  display: inline-block;
+  animation: scrollLoop 20s linear infinite;
+}
+
+.skill-item {
+  display: inline-block;
+  margin: 0 2rem;
+}
