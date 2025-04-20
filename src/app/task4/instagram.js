@@ -9,7 +9,7 @@ const Detail = ({proPic, name, picture, caption}) => {
     const [showComment,setShowComment] = useState(false);
     const [commentInput, setCommentInput] = useState("");
     const [comments, setComments]= useState([
-        {id:1, name: "Sakura", text: "I know! she's so annoying😭", pic:"https://w0.peakpx.com/wallpaper/430/51/HD-wallpaper-haruno-sakura-narut-pink.jpg"},
+        {id:1, name: "Sakura", text: "I know! shes so annoying😭", pic:"https://w0.peakpx.com/wallpaper/430/51/HD-wallpaper-haruno-sakura-narut-pink.jpg"},
         {id:2, name: "Pain_Sama", text:"last time she said she was me 💀", pic:"https://w0.peakpx.com/wallpaper/379/892/HD-wallpaper-pain-rinnegan-akatsuki-boruto-itachi-madara-naruto-pain-rinnegan-sasuke-sharingan-uchiha.jpg"},
         {id:3, name: "MightygUy", text:"She even said shes my student 😭", pic:"https://w0.peakpx.com/wallpaper/745/702/HD-wallpaper-anime-naruto-might-guy-eight-gates-naruto.jpg"}
     ]);

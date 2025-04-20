@@ -61,7 +61,7 @@ export default function page(){
                         </div>
                     </div>
                     <div className="space-y-10 container max-w-xl text-2xl ">
-                        <p className="font-semibold">I'm a UX designer and Front-end developer with background in software development.</p>
+                        <p className="font-semibold">I&#39;m a UX designer and Front-end developer with background in software development.</p>
                         <p className="font-semibold">
                             My journey into design started with a love for aesthetics, especially in fashion and architecture, 
                             and a curiosity about why things are made the way they are. When I discovered user-centered design, everything clicked. 
@@ -101,29 +101,6 @@ export default function page(){
             </div>
 
             </section>
-            <section className="skill-strip">
-                <div className="skill-scroll">
-                    <span className="skill-item">JavaScript</span>
-                    <span className="skill-item">Figma</span>
-                    <span className="skill-item">React</span>
-                    <span className="skill-item">Tailwind</span>
-                    <span className="skill-item">HTML</span>
-                    <span className="skill-item">CSS</span>
-                    <span className="skill-item">Firebase</span>
-                    <span className="skill-item">UX Design</span>
-                    <span className="skill-item">JavaScript</span>
-                    <span className="skill-item">Figma</span>
-                    <span className="skill-item">React</span>
-                    <span className="skill-item">Tailwind</span>
-                    <span className="skill-item">HTML</span>
-                    <span className="skill-item">CSS</span>
-                    <span className="skill-item">Firebase</span>
-                    <span className="skill-item">UX Design</span>
-                </div>
-            </section>
-
-
-
         </main>
     )
 }
