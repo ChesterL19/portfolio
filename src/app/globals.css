@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-geist-sans: 'Bebas Neue', sans-serif;
 }
 
 @theme inline {
@@ -22,34 +25,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@keyframes scrollLoop {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.skill-strip {
-  overflow: hidden;
-  background: var(--background);
-  padding: 1rem;
-  color: var(--foreground);
-  font-weight: 600;
-  font-size: 1.2rem;
-  white-space: nowrap;
-}
-
-.skill-scroll {
-  display: inline-block;
-  animation: scrollLoop 20s linear infinite;
-}
-
-.skill-item {
-  display: inline-block;
-  margin: 0 2rem;
-}

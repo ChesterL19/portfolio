@@ -1,5 +1,6 @@
 "use client";
 import NavBar from "@/components/NavBar";
+import Skill from "@/components/Skill";
 
 
 export default function page(){
@@ -35,15 +36,15 @@ export default function page(){
             </div>
             
             {/*info section */}
-            <section>
-            <h1 className=" pl-8 mb-2 text-2xl font-semibold bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent">Info</h1>
+            <section className="p-10 flex related">
+            <h1 className="  absolute left-7  text-xl font-semibold bg-gradient-to-r from-gray-400 to-white/90 bg-clip-text text-transparent">Info</h1>
                 <div className=" mx-4 mt- 4 pr-32 flex justify-between p-10 items-center ">
                 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center gap-4 mt-10 ">
                         <div className="relative top-1/2 -translate-y-40">
                             <img
-                            src="/sun.jpg"
-                            alt="sun"
+                            src="/cow.jpg"
+                            alt="cow"
                             className="w-56 h-80 object-cover rounded-2xl opacity-80 scale-90"
                             />
                         </div>
@@ -60,7 +61,7 @@ export default function page(){
                             className="w-56 h-80 object-cover rounded-2xl opacity-80 scale-90"/>
                         </div>
                     </div>
-                    <div className="space-y-10 container max-w-xl text-2xl ">
+                    <div className="space-y-10 container max-w-lg text-xl ">
                         <p className="font-semibold">I&#39;m a UX designer and Front-end developer with background in software development.</p>
                         <p className="font-semibold">
                             My journey into design started with a love for aesthetics, especially in fashion and architecture, 
@@ -75,10 +76,23 @@ export default function page(){
                 </div>
 
             </section>
-                        {/*devider section */}
+
+            {/*devider section */}
             <div className="flex items-center justify-center my-8">
                 <hr className="w-full border-t-1 border-gray-400/50"/>   
             </div>
+
+            <section>
+                <div >
+                    <Skill />
+                </div>
+            </section>
+
+            {/*devider section */}
+            <div className="flex items-center justify-center my-8">
+                <hr className="w-full border-t-1 border-gray-400/50"/>   
+            </div>
+
             <section>
             <h1 className=" pl-8 mb-2 text-2xl font-semibold bg-gradient-to-r from-gray-400 to-white bg-clip-text text-transparent">Education</h1>
             <div className="mx-4 mt-4  flex justify-between p-10 items-center w-full text-black/75">
