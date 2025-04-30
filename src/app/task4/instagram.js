@@ -126,7 +126,7 @@ export default function Instagram() {
                 proPic="https://wallpapers.com/images/high/chibi-half-face-rock-lee-vkzxb29ssbhvtwxk.webp"
                 name= "RockLee"
                 picture="https://wallpapers.com/images/high/rock-lee-in-the-forest-n6x0c97a8podtpar.webp"
-                caption="@heleedani stop being me!! you will never be me.I will kick her ass!😡 "
+                caption="Feeling Great!"
                 />
             </div>
         </div>
