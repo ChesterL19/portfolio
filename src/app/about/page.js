@@ -64,9 +64,9 @@ export default function page(){
                     <div className="space-y-10 container max-w-lg text-xl ">
                         <p className="font-semibold">I&#39;m a UX designer and Front-end developer with background in software development.</p>
                         <p className="font-semibold">
-                            My journey into design started with a love for aesthetics, especially in fashion and architecture, 
+                            My journey into design started with a love for aesthetics, especially in fashion, photography, architecture,
                             and a curiosity about why things are made the way they are. When I discovered user-centered design, everything clicked. 
-                            I realized I could build digital experiences that not only look great but also help people stay connected and not get left behind by technology.
+                            I realized I could build digital experiences that not only look great but also <span className="bg-yellow-300 text-gray-800/80 px-2  ">help people stay connected and not get left behind by technology.</span>
                         </p>
                         <p className="font-semibold">
                         I enjoy playing with my ideas and turning them into digital experiences that people can actually use and enjoy.

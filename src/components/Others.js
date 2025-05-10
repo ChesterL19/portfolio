@@ -6,7 +6,7 @@ import { useState } from "react";
 function Abilities ({skills}){
 
     return(
-        <section className=" p-10 bg-black w-lg h-96 text-white ml-20 rounded-2xl">
+        <section className=" p-10 bg-black w-lg h-96 text-white mx- rounded-2xl">
             <h1 className="font-bold text-3xl">Others</h1>
             <div className="flex items-center justify-center my-8">
                 <hr className="w-full border-t-1 border-white"/>
