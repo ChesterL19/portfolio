@@ -7,25 +7,22 @@ import Others from "./Others";
 import Frontend from "./Frontend";
 import Tools from "./Tools";
 
-
 const Skill = () =>{
-
     return(
-        <div className="flex flex-row justify-center gap-4 ">
-            <div>
+        <div className="flex flex-row justify-center gap-4 stagger-container">
+            <div className="stagger-item">
                 <Frontend />
             </div>
 
-            <div>
+            <div className="stagger-item">
                 <Tools />
             </div>
 
-            <div>
+            <div className="stagger-item">
                 <Backend />
             </div>
         </div>
     )
-
 } 
 
 export default Skill;
