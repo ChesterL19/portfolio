@@ -32,3 +32,339 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+/* Global Animation Variants */
+:root {
+  --animation-duration-fast: 0.2s;
+  --animation-duration-normal: 0.6s;
+  --animation-duration-slow: 0.8s;
+  --animation-duration-very-slow: 1s;
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Fade In Animations */
+.fade-in-up {
+  animation: fadeInUp 0.8s var(--ease-out) forwards;
+}
+
+.fade-in-down {
+  animation: fadeInDown 0.8s var(--ease-out) forwards;
+}
+
+.fade-in-left {
+  animation: fadeInLeft 0.8s var(--ease-out) forwards;
+}
+
+.fade-in-right {
+  animation: fadeInRight 0.8s var(--ease-out) forwards;
+}
+
+/* Scale Animations */
+.scale-in {
+  animation: scaleIn 0.6s var(--ease-out) forwards;
+}
+
+.scale-in-hover {
+  transition: transform 0.3s var(--ease-out);
+}
+
+.scale-in-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Slide Animations */
+.slide-in-left {
+  animation: slideInLeft 0.8s var(--ease-out) forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s var(--ease-out) forwards;
+}
+
+/* Stagger Animations */
+.stagger-container {
+  opacity: 0;
+  animation: fadeIn 0.8s var(--ease-out) forwards;
+}
+
+.stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: staggerFadeIn 0.6s var(--ease-out) forwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hover-scale {
+  transition: transform 0.3s var(--ease-out);
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-rotate {
+  transition: transform 0.3s var(--ease-out);
+}
+
+.hover-rotate:hover {
+  transform: rotate(2deg);
+}
+
+/* Gradient Text Animation */
+.gradient-text-animate {
+  background: linear-gradient(90deg, #3B82F6, #8B5CF6, #EF4444);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+/* Divider Animation */
+.divider-animate {
+  transform: scaleX(0);
+  animation: expandDivider 1s var(--ease-out) forwards;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes expandDivider {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Scroll-triggered animations */
+.scroll-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.scroll-fade-in.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-slide-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.scroll-slide-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-slide-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.scroll-slide-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+}
+
+.scroll-scale-in.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Utility classes for common animations */
+.animate-on-scroll {
+  opacity: 0;
+  transition: all 0.8s var(--ease-out);
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+}
+
+/* Interactive hover states */
+.interactive-hover {
+  transition: all 0.3s var(--ease-out);
+}
+
+.interactive-hover:hover {
+  transform: scale(1.02);
+}
+
+.interactive-hover:hover.text-hover {
+  color: #3B82F6;
+}
+
+/* Skill card animations */
+.skill-card {
+  transition: all 0.3s var(--ease-out);
+}
+
+.skill-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.skill-item {
+  transition: all 0.2s var(--ease-out);
+}
+
+.skill-item:hover {
+  transform: scale(1.1);
+  color: #FEF3C7;
+}
+
+/* Navigation dot animations */
+.nav-dot {
+  transition: all 0.3s var(--ease-out);
+}
+
+.nav-dot:hover {
+  transform: scale(1.2);
+}
+
+.nav-dot.active {
+  background-color: #3B82F6;
+  transform: scale(1.25);
+}
+
+.nav-label {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nav-dot:hover + .nav-label,
+.nav-dot:hover ~ .nav-label {
+  opacity: 1;
+}
+
