@@ -52,21 +52,45 @@ export const initStaggerAnimations = () => {
   });
 };
 
-// Initialize all animations when DOM is loaded
-export const initAnimations = () => {
-  if (typeof window !== 'undefined') {
-    // Wait for DOM to be ready
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', () => {
-        initScrollAnimations();
-        initStaggerAnimations();
-      });
-    } else {
-      initScrollAnimations();
-      initStaggerAnimations();
-    }
-  }
-};
+export function initAnimations() {
+
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+      }
+    });
+  }, observerOptions);
+
+
+  const scrollElements = document.querySelectorAll(
+    '.scroll-fade-in, .scroll-slide-left, .scroll-slide-right, .scroll-scale-in'
+  );
+
+  scrollElements.forEach(el => {
+    observer.observe(el);
+  });
+
+  // Add stagger animations to skill items
+  const skillItems = document.querySelectorAll('.skill-item');
+  skillItems.forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.1}s`;
+  });
+
+  // Add stagger animations to stagger items
+  const staggerItems = document.querySelectorAll('.stagger-item');
+  staggerItems.forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.1}s`;
+  });
+
+  // Initialize any other animations that need setup
+  console.log('Animations initialized');
+}
 
 // Utility for adding animation classes
 export const addAnimationClass = (element, animationClass) => {
